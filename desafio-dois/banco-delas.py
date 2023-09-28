@@ -96,5 +96,14 @@ conta2.depositar (250.00)
 print(conta1.saldo)
 print(conta2.saldo)
 
-conta1.sacar (8000.00)
+valor_saque = input("Quanto você quer sacar?")
+valor_saque = float(valor_saque)
+
+print(conta1.operacoes)
+try:
+    conta1.sacar (8000.00)
+except ValueError as e:
+    print(f"Erro durante a execução: {e}")
+
+
 conta2.sacar (150.00)
